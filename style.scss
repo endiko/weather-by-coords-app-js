@@ -16,31 +16,58 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: #cbe7f7;
+    // background: #cbe7f7;
+    
 }
 
 .main {
     flex: 1;
     display: flex;
     align-items: center;
+    background: rgba(148, 205, 238, 0.7);
+    background-image: repeating-linear-gradient(45deg, rgba(203, 231, 247, 0.5) 0, rgba(203, 231, 247, 0.5) 7px, transparent 7px, transparent 17px);
 }
 
 .header {
-    background: #94cdee;
-    background-image: repeating-linear-gradient(45deg, #cbe7f7 0, #cbe7f7 10px, transparent 10px, transparent 30px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 4rem;
+    background: rgba(2, 18, 130, 0.6);
+
+    &__title {
+        font-size: 1.85rem;
+        color: #fff;
+        font-weight: 600;
+        text-align: center;
+        text-shadow: 1px 1px 5px #111111;
+    }
 }
 
 .footer {
-    background: #6d6868;
+    background: rgba(58, 212, 192, 0.5);
+    height: 1.75rem;
+    color: #111;
+
+    &__heart {
+        color: red;
+        font-size: 2rem;
+    }
+
+    &__social-link svg {
+        width: 1.25rem;
+        height: 1.25rem;
+        fill: #6771b4;
+    }
 }
 
 .container {
     width: 100%;
     min-width: 320px;
     max-width: 600px;
-    padding: 0 15px;
+    // padding: 0 15px;
     margin: 0 auto;
+    
 }
 
 .weather-app {
@@ -48,9 +75,9 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        border-radius: 20px;
-        padding: 1rem 0;
-        background: #fff;
+        // border-radius: 20px;
+        padding: 2rem 15px;
+        background: rgba(255, 255, 255, 0.5);
     }
     &__container {
         // margin-top: 3rem;
@@ -59,7 +86,19 @@ body {
         justify-items: center;
     }
     &__title {
-        
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: .5rem;
+        justify-items: center;
+        font-size: 1.25rem;
+
+        & span {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #d40e00;
+    
+        }
     }
     &__icon {
         width: 100%;
@@ -82,12 +121,22 @@ body {
     }
     &__temperature-value {
         font-size: 4.25rem;
-        font-weight: 600;
+        font-weight: 700;
+        color: #021282;
+        margin-top: -1rem;
         cursor: pointer;
 
         & span {
             font-size: 2.5rem;
         }
+    }
+    &__temperature-desc {
+        font-size: 2rem;
+        font-weight: 500;
+        color: #00d4c0;
+    }
+    &__location {
+        font-weight: 700;
     }
 }
 
