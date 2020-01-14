@@ -50,7 +50,7 @@ function showError(error) {
 }
 
 function getWeather(lat, long) {
-    let api = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${key}&lang=ru`;
+    let api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${key}&lang=ru`;
 
     fetch(api).then(function (response) {
         let data = response.json();
