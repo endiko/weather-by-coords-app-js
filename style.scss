@@ -16,16 +16,14 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    // background: #cbe7f7;
-    
 }
 
 .main {
     flex: 1;
     display: flex;
     align-items: center;
-    background: rgba(148, 205, 238, 0.7);
-    background-image: repeating-linear-gradient(45deg, rgba(203, 231, 247, 0.5) 0, rgba(203, 231, 247, 0.5) 7px, transparent 7px, transparent 17px);
+    background: rgba(233, 240, 245, 0.54);
+    background-image: repeating-linear-gradient(45deg, rgba(226, 245, 255, 0.5) 0, rgba(226, 242, 251, 0.5) 7px, transparent 7px, transparent 17px);
 }
 
 .header {
@@ -46,13 +44,17 @@ body {
 
 .footer {
     background: rgba(58, 212, 192, 0.5);
-    height: 1.75rem;
+    padding: .4rem 0;
+    font-size: .8rem;
+    font-weight: 700;
     color: #111;
 
-    &__heart {
-        color: red;
-        font-size: 2rem;
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
+
 
     &__social-link svg {
         width: 1.25rem;
@@ -65,22 +67,22 @@ body {
     width: 100%;
     min-width: 320px;
     max-width: 600px;
-    // padding: 0 15px;
     margin: 0 auto;
-    
 }
 
 .weather-app {
     &__wrapper {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
-        // border-radius: 20px;
-        padding: 2rem 15px;
-        background: rgba(255, 255, 255, 0.5);
+        min-height: 25rem;
+        background: #fff;
+        height: 500px;
+        box-shadow: 0 0 0 1px rgba(0,0,0,.2);
+        border-radius: 15%;
     }
     &__container {
-        // margin-top: 3rem;
         display: grid;
         grid-gap: 1rem;
         justify-items: center;
@@ -97,7 +99,6 @@ body {
             font-size: 1.5rem;
             font-weight: 700;
             color: #d40e00;
-    
         }
     }
     &__icon {
@@ -117,6 +118,7 @@ body {
             font-size: 1.125rem;
             justify-content: center;
             width: 100%;
+            margin-top: 3rem;
         }
     }
     &__temperature-value {
