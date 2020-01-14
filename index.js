@@ -1,9 +1,11 @@
 // Selected elements
+const titleElement = document.querySelector('.weather-app__title');
 const notificationElement = document.querySelector('.weather-app__notification');
 const iconElement = document.querySelector('.weather-app__icon-wrapper');
-const temperatureElement = document.querySelector('.weather-app__temperature-value p');
-const descElement = document.querySelector('.weather-app__temperature-desc p');
-const locationElement = document.querySelector('.weather-app__location p');
+const temperatureElement = document.querySelector('.weather-app__temperature-value');
+const descElement = document.querySelector('.weather-app__temperature-desc');
+const locationElement = document.querySelector('.weather-app__location');
+
 
 // App data
 const weather = {};
@@ -20,18 +22,9 @@ const options = {
     timeout: 5000,
     maximumAge: 0
 }
+
 // API key
 const key = '744a894c52e8e651e58f052a61080637';
-
-// check if browser support geolocation
-
-if ('geolocation' in navigator) {
-    navigator.geolocation.getCurrentPosition(setPosition, showError, options);
-} else {
-    notificationElement.getElementsByClassName.display = 'flex';
-    notificationElement.innerHTML = `<p>Browser doesn't support geolocation</p>`;
-}
-
 //  set user's position
 
 function setPosition(position) {
@@ -50,7 +43,7 @@ function showError(error) {
 }
 
 function getWeather(lat, long) {
-    let api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${key}&lang=ru`;
+    let api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${key}&lang=en`;
 
     fetch(api).then(function (response) {
         let data = response.json();
@@ -95,5 +88,27 @@ temperatureElement.addEventListener('click', function (e) {
     } else {
         temperatureElement.innerHTML = `${weather.temperature.value}&#176;<span>C</span>`;
         weather.temperature.unit = 'celsius';
+    }
+})
+
+function getTodayDate() {
+    const date = new Date();
+    const options = {
+        year: 'numeric', month: 'long', day: 'numeric'
+    };
+    const today = date.toLocaleDateString('en-En', options);
+    titleElement.innerHTML = `Today is <span>${today}</span>`
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    getTodayDate();
+
+    // check if browser support geolocation
+
+    if ('geolocation' in navigator) {
+        navigator.geolocation.getCurrentPosition(setPosition, showError, options);
+    } else {
+        notificationElement.getElementsByClassName.display = 'flex';
+        notificationElement.innerHTML = `<p>Browser doesn't support geolocation</p>`;
     }
 })
