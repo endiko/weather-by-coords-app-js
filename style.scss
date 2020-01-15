@@ -7,15 +7,23 @@
 html, body {
     width: 100%;
     min-height: 100vh;
-    font: 16px 'Comfortaa', cursive;
+    font-size: 16px;
+    font-family: 'Comfortaa', cursive;
     color: #111111;
-    
+    @media all and (max-width: 1024px) {
+        font-size: 14px;
+    }
+    @media all and (max-width: 768px) {
+        font-size: 12px;
+    }
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-size: 1rem;
+    
 }
 
 .main {
@@ -66,7 +74,7 @@ body {
 .container {
     width: 100%;
     min-width: 320px;
-    max-width: 600px;
+    max-width: 35rem;
     margin: 0 auto;
 }
 
@@ -76,9 +84,8 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        min-height: 25rem;
+        min-height: 30rem;
         background: #fff;
-        height: 500px;
         box-shadow: 0 0 0 1px rgba(0,0,0,.2);
         border-radius: 15%;
     }
