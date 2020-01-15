@@ -104,6 +104,7 @@ body {
   min-width: 320px;
   max-width: 35rem;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .weather-app__wrapper {
@@ -125,6 +126,14 @@ body {
   -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
   border-radius: 15%;
+}
+
+@media all and (max-width: 480px) {
+  .weather-app__wrapper {
+    border-radius: 0;
+    -webkit-box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2);
+  }
 }
 
 .weather-app__container {

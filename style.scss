@@ -76,6 +76,7 @@ body {
     min-width: 320px;
     max-width: 35rem;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 .weather-app {
@@ -88,6 +89,10 @@ body {
         background: #fff;
         box-shadow: 0 0 0 1px rgba(0,0,0,.2);
         border-radius: 15%;
+        @media all and (max-width: 480px) {
+            border-radius: 0;
+            box-shadow: 0 0 0 1px rgba(255,255,255,.2);
+        }
     }
     &__container {
         display: grid;
