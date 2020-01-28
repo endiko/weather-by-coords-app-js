@@ -87,12 +87,7 @@ body {
         align-items: center;
         min-height: 30rem;
         background: #fff;
-        box-shadow: 0 0 0 1px rgba(0,0,0,.2);
-        border-radius: 15%;
-        @media all and (max-width: 480px) {
-            border-radius: 0;
-            box-shadow: 0 0 0 1px rgba(255,255,255,.2);
-        }
+        box-shadow: 0 0 10px 0px rgba(0,0,0,.1);
     }
     &__container {
         display: grid;

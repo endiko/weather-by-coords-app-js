@@ -122,17 +122,8 @@ body {
           align-items: center;
   min-height: 30rem;
   background: #fff;
-  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
-  border-radius: 15%;
-}
-
-@media all and (max-width: 480px) {
-  .weather-app__wrapper {
-    border-radius: 0;
-    -webkit-box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2);
-            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2);
-  }
+  -webkit-box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.1);
 }
 
 .weather-app__container {
